@@ -11,8 +11,13 @@ def dayOfTheYear(std_date):
 
 ORIGIN = 3
 LENGTH_OF_LINE = ORIGIN + (365 / 20)
+COLOR_CODE = {
+    "background": "rgb(255, 241, 229)",  #
+    "lines": "rgb(173, 216, 230)",
+    "bubble_stroke": "rgb(255, 255, 0)",
+    "year": "rgb(85, 136, 238)",
+}
 
-print("LENGTH OF LINE IS ", LENGTH_OF_LINE)
 
 years = [2023, 2022, 2021, 2020, 2019, 2018, 2017]
 
@@ -130,10 +135,25 @@ post_url_on = {
 
 
 def build_svg(name):
-    dwg = svgwrite.Drawing(filename=name, debug=True)
-    paragraph = dwg.add(dwg.g(font_size=20, fill="rgb(0, 0, 139)"))
+    dwg = svgwrite.Drawing(filename=name, size=(1000, 400))
 
-    hlines = dwg.add(dwg.g(id="hlines", stroke="rgb(165, 167, 171)", stroke_width=10))
+    dwg.add(
+        dwg.rect(
+            insert=(0, 0),
+            size=("100%", "100%"),
+            rx=None,
+            ry=None,
+            fill=COLOR_CODE["background"],
+            stroke="black",
+            stroke_width=3,
+        )
+    )
+
+    paragraph = dwg.add(
+        dwg.g(style="font-size:20px; font-weight:Bold; fill:COLOR_CODE['year']")
+    )
+
+    hlines = dwg.add(dwg.g(id="hlines", stroke=COLOR_CODE["lines"], stroke_width=10))
 
     for y in range(len(years)):
         paragraph.add(dwg.text(years[y], (1 * cm, (2.1 + y) * cm)))
@@ -164,7 +184,7 @@ def build_svg(name):
                 circle = dwg.circle(
                     center=((ORIGIN + (dayOfTheYear(d) * 0.058)) * cm, (2 + y) * cm,),
                     r="4",
-                    stroke="yellow",
+                    stroke=COLOR_CODE["bubble_stroke"],
                     stroke_width=1,
                 )
 

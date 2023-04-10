@@ -28,13 +28,14 @@ years = [2023, 2022, 2021, 2020, 2019, 2018, 2017]
 
 posted_date = {
     2023: [
-        "2023-01-01",
-        "2023-01-08",
-        "2023-01-15",
-        "2023-01-22",
-        "2023-01-29",
-        "2023-02-05",
+        "2023-04-08",
         "2023-02-12",
+        "2023-02-05",
+        "2023-01-29",
+        "2023-01-22",
+        "2023-01-15",
+        "2023-01-08",
+        "2023-01-01",
     ],
     2022: ["2022-05-09", "2022-05-17", "2022-08-22", "2022-10-13"],
     2021: ["2021-04-16", "2021-05-29", "2021-07-12", "2021-08-20", "2021-11-30",],
@@ -82,13 +83,14 @@ posted_date = {
 }
 
 post_url_on = {
-    "2023-01-01": "https://dheepakg.github.io/post/2023/01/project-update-1/",
-    "2023-01-08": "https://dheepakg.github.io/post/2023/01/are-you-envious-of-younger-generation/",
-    "2023-01-15": "https://dheepakg.github.io/post/2023/01/personal-help/maid-affordability-a-social-indicator/",
-    "2023-01-22": "https://dheepakg.github.io/post/2023/01/project-update-2/",
-    "2023-01-29": "https://dheepakg.github.io/post/2023/01/project-update-3/",
-    "2023-02-05": "https://dheepakg.github.io/post/2023/02/osmosis-irl/",
+    "2023-04-08": "https://dheepakg.github.io/post/2023/04/visualization-post-grouped-by-years/",
     "2023-02-12": "https://dheepakg.github.io/post/2023/02/api-configurations-database-operation/",
+    "2023-02-05": "https://dheepakg.github.io/post/2023/02/osmosis-irl/",
+    "2023-01-29": "https://dheepakg.github.io/post/2023/01/project-update-3/",
+    "2023-01-22": "https://dheepakg.github.io/post/2023/01/project-update-2/",
+    "2023-01-15": "https://dheepakg.github.io/post/2023/01/personal-help/maid-affordability-a-social-indicator/",
+    "2023-01-08": "https://dheepakg.github.io/post/2023/01/are-you-envious-of-younger-generation/",
+    "2023-01-01": "https://dheepakg.github.io/post/2023/01/project-update-1/",
     "2022-05-09": "https://dheepakg.github.io/post/2022/05/cross-compatibility-is-key/",
     "2022-05-17": "https://dheepakg.github.io/post/2022/05/hugo-site-deployment-using-github-actions/",
     "2022-08-22": "https://dheepakg.github.io/post/2022/08/what-if-google-suspends-your-account/",
@@ -140,6 +142,10 @@ post_url_on = {
 
 
 post_url__title_on = {
+    "2023-04-08": {
+        "title": "Visualization: Post grouped by years",
+        "url": "https://dheepakg.github.io/post/2023/04/visualization-post-grouped-by-years/",
+    },
     "2023-01-01": {
         "title": "Project Update - 1",
         "url": "https://dheepakg.github.io/post/2023/01/project-update-1/",

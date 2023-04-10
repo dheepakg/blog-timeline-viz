@@ -37,7 +37,7 @@ posted_date = {
         "2023-02-12",
     ],
     2022: ["2022-05-09", "2022-05-17", "2022-08-22", "2022-10-13"],
-    2021: ["2021-04-16", "2021-09-30", "2021-08-20", "2021-07-12", "2021-05-29"],
+    2021: ["2021-04-16", "2021-05-29", "2021-07-12", "2021-08-20", "2021-11-30",],
     2020: [
         "2020-11-10",
         "2020-11-03",
@@ -94,7 +94,7 @@ post_url_on = {
     "2022-08-22": "https://dheepakg.github.io/post/2022/08/what-if-google-suspends-your-account/",
     "2022-10-13": "https://dheepakg.github.io/post/2022/10/migrated-to-blogdown/",
     "2021-04-16": "https://dheepakg.github.io/post/2021/04/aws-certified-solution-architect-for-whom-why-and-how/",
-    "2021-09-30": "https://dheepakg.github.io/post/2021/11/yet-another-tech-ceo-of-indian-origin/",
+    "2021-11-30": "https://dheepakg.github.io/post/2021/11/yet-another-tech-ceo-of-indian-origin/",
     "2021-08-20": "https://dheepakg.github.io/post/2021/08/a-backend-devs-journey-into-js-world-part-i/",
     "2021-07-12": "https://dheepakg.github.io/post/2021/07/power-of-open-data/",
     "2021-05-29": "https://dheepakg.github.io/post/2021/05/longreads-with-kindle/",
@@ -285,11 +285,11 @@ post_url__title_on = {
         "url": "https://dheepakg.github.io/post/2020/02/comparison-of-various-hdfs-file-formats/",
     },
     "2020-01-05": {
-        "title": "https://dheepakg.github.io/post/2020/01/the-2010s-part-2/",
+        "title": "The 2010s - Part 1",
         "url": "https://dheepakg.github.io/post/2020/01/the-2010s-part-1/",
     },
     "2020-01-10": {
-        "title": "The 2010s - Part 1",
+        "title": "The 2010s - Part 2",
         "url": "https://dheepakg.github.io/post/2020/01/the-2010s-part-2/",
     },
     "2019-12-25": {

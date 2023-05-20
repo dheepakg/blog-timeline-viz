@@ -7,12 +7,6 @@ const svg = d3
 const LINE_ORIGIN = 70;
 const TEXT_ORIGIN = 20;
 
-var div = d3
-  .select("body")
-  .append("div")
-  .attr("class", "tooltip")
-  .style("opacity", 0);
-
 const graph = svg.append("g").attr("width", 500).attr("height", 400);
 
 graph

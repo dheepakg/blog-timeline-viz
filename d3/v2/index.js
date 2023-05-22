@@ -19,6 +19,31 @@ graph
 graph
   .append("circle")
   .attr("cx", 200)
-  .attr("cy", 200)
+  .attr("cy", 300)
   .attr("r", 40)
-  .attr("fill", "grey");
+  .attr("fill", "grey")
+  .on("mouseover", function () {
+    return tooltip.style("visibility", "visible");
+  })
+  .on("mousemove", function () {
+    return tooltip.style("top", 300).style("left", 200);
+  })
+  .on("mouseout", function () {
+    return tooltip.style("visibility", "hidden");
+  });
+
+var tooltip = d3
+  .select("body")
+  .append("div")
+  .style("position", "relative")
+  .style("display", "inline-block")
+  .style("visibility", "hidden")
+  .style("width", "120px")
+  .style("background-color", "black")
+  .style("color", "#fff")
+  .style("text-align", "center")
+  .style("border-radius", "6px")
+  .style("padding", "5px 0")
+  .style("position", "absolute")
+  .style("z-index", "1")
+  .text("a simple tooltip");

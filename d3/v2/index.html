@@ -2,14 +2,40 @@
   <head>
     <title>Setting up D3JS</title>
   </head>
+  <style>
+    .tooltip {
+      position: absolute;
+      pointer-events: none;
+      background: #e0e0e0;
+      color: #000;
+      width: 120px;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      left: 50%;
+      margin-left: -60px;
+      z-index: 1;
+    }
+
+    .tooltip::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 8px;
+      border-style: solid;
+      border-color: #e0e0e0 transparent transparent transparent;
+    }
+  </style>
   <body>
     <h1>Posts calendar</h1>
     <p>
       <li>Used title in svg to act as tooltip.</li>
     </p>
     <div class="canvas"></div>
-    <div class="tooltip"></div>
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="index.js"></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+    <script src="index1.js"></script>
   </body>
 </html>

@@ -4,46 +4,26 @@ const svg = d3
   .attr("width", 900)
   .attr("height", 600);
 
-const graph = svg.append("g").attr("width", 500).attr("height", 400);
-
-graph
-  .append("rect")
-  .attr("x", 0)
-  .attr("y", 0)
-  .attr("width", 900)
-  .attr("height", 500)
-  .attr("fill", "#fff1e5")
-  .attr("stroke", "black")
-  .attr("stroke-width", 3);
-
-graph
+svg
   .append("circle")
   .attr("cx", 200)
   .attr("cy", 300)
   .attr("r", 40)
   .attr("fill", "grey")
-  .on("mouseover", function () {
-    return tooltip.style("visibility", "visible");
+  .on("mouseover", function (d) {
+    tip
+      .style("opacity", 1)
+      .html("Something")
+      .style("left", d.pageX - 25 + "px")
+      .style("top", d.pageY - 75 + "px");
   })
-  .on("mousemove", function () {
-    return tooltip.style("top", 300).style("left", 200);
-  })
+  // we hide our tooltip on "mouseout"
   .on("mouseout", function () {
-    return tooltip.style("visibility", "hidden");
+    tip.style("opacity", 0);
   });
 
-var tooltip = d3
+var tip = d3
   .select("body")
   .append("div")
-  .style("position", "relative")
-  .style("display", "inline-block")
-  .style("visibility", "hidden")
-  .style("width", "120px")
-  .style("background-color", "black")
-  .style("color", "#fff")
-  .style("text-align", "center")
-  .style("border-radius", "6px")
-  .style("padding", "5px 0")
-  .style("position", "absolute")
-  .style("z-index", "1")
-  .text("a simple tooltip");
+  .attr("class", "tooltip")
+  .style("opacity", 0);

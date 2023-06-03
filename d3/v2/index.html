@@ -5,13 +5,14 @@
   <style>
     .tooltip {
       position: absolute;
+      font-family: monospace;
       pointer-events: none;
-      background: #e0e0e0;
-      color: #000;
-      width: 120px;
-      text-align: center;
+      background: silver;
+      color: black;
+      /* width: 400px; */
+      text-align: left;
       border-radius: 6px;
-      padding: 5px 0;
+      padding: 5px 5px;
       left: 50%;
       margin-left: -60px;
       z-index: 1;
@@ -19,13 +20,13 @@
 
     .tooltip::after {
       content: "";
-      position: absolute;
+      position: relative;
       top: 100%;
-      left: 50%;
+      /* left: 0; */
       margin-left: -5px;
       border-width: 8px;
       border-style: solid;
-      border-color: #e0e0e0 transparent transparent transparent;
+      border-color: transparent transparent transparent transparent;
     }
   </style>
   <body>

@@ -72,17 +72,17 @@ d3.json("details.json").then((data) => {
     .attr("font-size", 18)
     .attr("font-weight", "Bold");
 
-  console.log(
-    xScale(dayOfTheYear("2023-05-22")),
-    xScale(yearCompleted(currentYear()))
-  );
+  // console.log(
+  //   xScale(dayOfTheYear("2023-05-22")),
+  //   xScale(yearCompleted(currentYear()))
+  // );
   today_text
     .enter()
     .append("text")
     .transition()
     .duration(1200)
     .text("Today")
-    .attr("x", xScale(yearCompleted(currentYear())) * 1.0)
+    .attr("x", xScale(yearCompleted(currentYear())))
     .attr("y", yScale(currentYear()) - 10)
     .attr("text-anchor", "middle")
     .attr("font-family", "monospace")
@@ -128,13 +128,21 @@ d3.json("details.json").then((data) => {
     .attr("cx", (d) => xScale(dayOfTheYear(d.pub_on)))
     .attr("cy", (d) => yScale(d.year))
     .attr("fill", "#0000EE")
-    .on("mouseover", function (d) {
+    .on("mouseover", function (event, d) {
       d3.select(this).attr("r", 6).attr("fill", "green");
+
       tip
         .style("opacity", 1)
-        .html(d.url + "  ")
-        .style("left", d.pageX - 2 + "px")
-        .style("top", d.pageY - 40 + "px");
+        .style("left", event.pageX - 20 + "px")
+        .style("top", event.pageY - 75 + "px")
+        // .style("display", "inline-block")
+        .html(
+          d.title +
+            "<br>Published on: " +
+            d.pub_on +
+            "<br>Category: " +
+            d.category
+        );
     })
 
     .on("mouseout", function (d) {
